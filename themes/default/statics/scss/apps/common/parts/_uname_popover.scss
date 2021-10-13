@@ -1,0 +1,184 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+div.popover{
+	padding: 0;
+	max-width: 100%;
+	border: none;
+	box-shadow: none;
+	outline: 0;
+	border-radius: 0px;
+	background: transparent;
+	overflow: visible;
+
+	div.arrow{
+		display: none;
+	}
+
+	h3.popover-header{
+		display: none;
+	}
+
+	div.popover-body{
+		padding: 1px;
+		margin: 0;
+		border: none;
+		box-shadow: none;
+
+		div.user-info-lbox{
+			width: 340px;
+			display: block;
+			background: var(--smc-main-bg-color-2);
+			box-shadow: var(--smc-main-box-shadow-eff);
+			border-radius: var(--smc-main-border-rad1);
+			z-index: 1200;
+
+			div.user-info-lbox__inner{
+				width: 100%;
+
+				div.user-info-lbox__user-data{
+					display: block;
+
+					div.user-info-lbox__avatar{
+						margin-bottom: 50px;
+						position: relative;
+
+						div.cover{
+							width: 100%;
+							min-height: 110px;
+							background: var(--smc-main-bg-color);
+							border-top-left-radius: var(--smc-main-border-rad1);
+							border-top-right-radius: var(--smc-main-border-rad1);
+							overflow: hidden;
+
+							img{
+								width: 100%;
+							}
+						}
+
+						div.avatar{
+							width: 100px;
+							height: 100px;
+							overflow: hidden;
+							border-radius: 100px;
+							position: absolute;
+							left: 15px;
+							bottom: -50px;
+							border: 3px solid var(--smc-main-bg-color-2);
+							background: var(--smc-main-bg-color);;
+
+							img{
+								width: 100%;
+							}
+						}
+					}
+
+					div.user-info-lbox__info{
+						padding: 15px;
+
+						div.name{
+							margin-bottom: 10px;
+
+							a{
+								text-decoration: none;
+								display: block;
+
+								h4{
+									padding: 0;
+									margin: 0;
+									
+									span{
+										b{
+											color: var(--smc-main-text-color);
+											font-size: 20px;
+											line-height: 28px;
+											font-weight: 700;
+											display: inherit;
+										}
+									}
+								}
+
+								span{
+									display: inherit;
+									width: 100%;
+									color: var(--smc-main-text-color-2);
+									font-size: 14px;
+									line-height: 18px;
+								}
+							}
+						}
+
+						div.stats{
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+
+							div.stat-holder{
+								line-height: 0px;
+								overflow: hidden;
+								padding: 0px 3px;
+								max-width: 50%;
+
+								a{
+									text-decoration: none;
+									line-height: 0;
+									display: inline-flex;
+									align-items: center;
+									overflow: hidden;
+									max-width: 100%;
+								}
+
+								span{
+									font-size: 13px;
+									line-height: 18px;
+									color: var(--smc-main-text-color-2);
+									overflow: hidden;
+									text-overflow: ellipsis;
+								}
+
+								b{
+									font-size: 14px;
+									color: var(--smc-main-text-color);
+									font-weight: 700;
+									line-height: 18px;
+									margin-right: 5px;
+								}
+
+								&:first-child{
+									margin-right: 15px;
+								}
+							}
+						}
+
+						div.about{
+							width: 100%;
+							margin-top: 15px;
+
+							p{
+								font-size: 14px;
+								line-height: 22px;
+								color: var(--smc-main-text-color-lighten-5);
+								padding: 0;
+								margin: 0;
+							}
+						}
+					}
+				}
+
+				div.user-info-lbox__user-ctrls{
+					border-top: 1px solid var(--smc-main-border-color);
+					padding: 15px;
+				}
+			}
+		}
+	}
+}

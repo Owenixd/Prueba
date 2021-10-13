@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Please select layout direction (ltr or rtl)?: " direction
+if [ "$direction" = "ltr" ]; then
+  scss --watch master.styles.scss:../css/master.styles.css
+else
+  scss --watch master.styles-rtl.scss:../css/master.styles.rtl.css
+fi

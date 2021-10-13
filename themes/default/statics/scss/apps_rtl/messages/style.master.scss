@@ -1,0 +1,50 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+body.cl-app-chat{
+	main.main-content-container{
+		div.main-content-container-inner{
+			div.timeline-container{
+				div.timeline-container-inner{
+					div.vue-app-body{
+						div.vue-app-body-inner{
+							div.chat-search-form-wrapper{
+								form{
+									div.keyword-input{
+										input{
+											padding: 0 50px 3px 0;
+										}
+									}
+								}
+							}
+
+							div.chat-contacts-list-wrapper{
+								div.chat-contacts-list{
+									div.chat-contacts-list-item{
+										a{
+											div.chat-contacts-list-item-inner{
+												div.rp{
+													div.rp-inner-content-header, div.rp-inner-content-body{
+														padding-left: 0px;
+														padding-right: 15px;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

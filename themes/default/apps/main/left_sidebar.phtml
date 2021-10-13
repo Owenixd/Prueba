@@ -1,0 +1,219 @@
+<div class="left-sb-container sidebar" data-app="left-sidebar">
+	<div class="sidebar__inner">
+		<div class="user-info">
+			<div class="avatar">
+				<img src="<?php echo($me['avatar']); ?>" alt="Avatar">
+			</div>
+			<div class="uname">
+				<a href="<?php echo($me['url']); ?>" data-spa="true">
+					<h5>
+						<span class="user-name-holder <?php if ($me['verified'] == '1') {echo('verified-badge');} ?>">
+							<?php echo cl_croptxt($me['username'], 15, ".."); ?>
+						</span>
+					</h5>
+				</a>
+			</div>
+		</div>
+		<div class="account-stats">
+			<div class="stat-holder">
+				<?php if (not_empty($me['following'])): ?>
+					<a href="<?php echo(cl_strf('%s/following', $cl['me']['url'])); ?>" data-spa="true">
+						<b data-an="total-following"><?php echo cl_number($me['following']); ?></b>
+						<span><?php echo cl_translate('Following'); ?></span>
+					</a>
+				<?php else: ?>
+					<b data-an="total-following"><?php echo cl_number($me['following']); ?></b>
+					<span><?php echo cl_translate('Following'); ?></span>
+				<?php endif; ?>
+			</div>
+			<div class="stat-holder">
+				<?php if (not_empty($me['followers'])): ?>
+					<a href="<?php echo(cl_strf('%s/followers', $cl['me']['url'])); ?>" data-spa="true">
+						<b data-an="total-followers"><?php echo cl_number($me['followers']); ?></b>
+						<span><?php echo cl_translate('Followers'); ?></span>
+					</a>
+				<?php else: ?>
+					<b data-an="total-followers"><?php echo cl_number($me['followers']); ?></b>
+					<span><?php echo cl_translate('Followers'); ?></span>
+				<?php endif; ?>
+			</div>
+		</div>
+		<div class="sidebar-v-nav-wrapper">
+			<ul class="sidebar-v-nav">
+				<li data-navitem="profile" class="sidebar-v-nav-item <?php if($cl['pn'] == 'profile' && not_empty($cl["page_xdata"]) && not_empty($cl["page_xdata"]["is_me"])) {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('user'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo($me["url"]); ?>" data-spa="true">
+							<?php echo($me["name"]); ?>
+						</a>
+					</span>
+				</li>
+				<li data-navitem="home" class="sidebar-v-nav-item <?php if($cl['pn'] == 'home') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('feed'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link('/'); ?>" data-spa="true">
+							<?php echo cl_translate('Timeline'); ?>
+						</a>
+					</span>
+				</li>
+				<li data-navitem="notifications" class="sidebar-v-nav-item <?php if($cl['pn'] == 'notifications') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('bell'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link("notifications"); ?>" data-spa="true">
+							<?php echo cl_translate('Notifications'); ?>
+							<span class="info-indicators" data-an="new-notifs"><?php echo fetch_or_get($me['new_notifs']); ?></span>
+						</a>
+					</span>
+				</li>
+				
+				<li data-navitem="trending" class="sidebar-v-nav-item <?php if($cl['pn'] == 'trending') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('activity'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link('trending'); ?>" data-spa="true">
+							<?php echo cl_translate('Trending'); ?>
+						</a>
+					</span>
+				</li>
+				<li data-navitem="search" class="sidebar-v-nav-item <?php if($cl['pn'] == 'search') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('grid-alt'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link("search"); ?>" data-spa="true">
+							<?php echo cl_translate('Explore'); ?>
+						</a>
+					</span>
+				</li>
+			</ul>
+			<ul class="sidebar-v-nav sidebar-v-nav-collapse">
+				<li class="sidebar-v-nav-item-devider"></li>
+				<?php if (not_empty($cl['is_admin'])): ?>
+					<li class="sidebar-v-nav-item">
+						<span class="icon">
+							<?php echo cl_ikon('chart'); ?>
+						</span>
+						<span class="nav-item-holder">
+							<a href="<?php echo cl_link("admin_panel"); ?>">
+								<?php echo cl_translate('Control panel'); ?>
+							</a>
+						</span>
+					</li>
+				<?php endif; ?>
+				<li class="sidebar-v-nav-item-devider"></li>
+				
+				<li data-navitem="chat" class="sidebar-v-nav-item <?php if($cl['pn'] == 'chat') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('envelope'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link("chats"); ?>" data-spa="true">
+							<?php echo cl_translate('Messages'); ?>
+							<span class="info-indicators" data-an="new-messages"><?php echo fetch_or_get($me['new_messages']); ?></span>
+						</a>
+					</span>
+				</li>
+				<li data-navitem="bookmarks" class="sidebar-v-nav-item <?php if($cl['pn'] == 'bookmarks') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('bookmark'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link("bookmarks"); ?>" data-spa="true">
+							<?php echo cl_translate('Bookmarks'); ?>
+						</a>
+					</span>
+				</li>
+				<?php if ($cl['config']['advertising_system'] == 'on'): ?>
+					<li class="sidebar-v-nav-item-devider"></li>
+					<li data-navitem="wallet" class="sidebar-v-nav-item <?php if($cl['pn'] == 'wallet') {echo('active');} ?>">
+						<span class="icon">
+							<?php echo cl_ikon('credit-card'); ?>
+						</span>
+						<span class="nav-item-holder">
+							<a href="<?php echo cl_link("wallet"); ?>" data-spa="true">
+								<?php echo cl_translate('Wallet'); ?> <b class="wallet">(<?php echo cl_money($me['wallet']); ?>)</b>
+							</a>
+						</span>
+					</li>
+					<li data-navitem="ads" class="sidebar-v-nav-item <?php if($cl['pn'] == 'ads') {echo('active');} ?>">
+						<span class="icon">
+							<?php echo cl_ikon('feed'); ?>
+						</span>
+						<span class="nav-item-holder">
+							<a href="<?php echo cl_link("ads"); ?>" data-spa="true">
+								<?php echo cl_translate('Advertising'); ?>
+							</a>
+						</span>
+					</li>
+				<?php endif; ?>
+				<?php if ($cl['config']['affiliates_system'] == 'on'): ?>
+					<li data-navitem="affiliates" class="sidebar-v-nav-item <?php if($cl['pn'] == 'affiliates') {echo('active');} ?>">
+						<span class="icon">
+							<?php echo cl_ikon('support-alt'); ?>
+						</span>
+						<span class="nav-item-holder">
+							<a href="<?php echo cl_link("affiliates"); ?>" data-spa="true">
+								<?php echo cl_translate('Affiliates'); ?>
+							</a>
+						</span>
+					</li>
+				<?php endif; ?>
+				<li class="sidebar-v-nav-item-devider"></li>
+				<li data-navitem="settings" class="sidebar-v-nav-item <?php if($cl['pn'] == 'settings') {echo('active');} ?>">
+					<span class="icon">
+						<?php echo cl_ikon('settings'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="<?php echo cl_link("settings"); ?>" data-spa="true">
+							<?php echo cl_translate('Profile settings'); ?>
+						</a>
+					</span>
+				</li>
+				<li class="sidebar-v-nav-item">
+					<span class="icon">
+						<?php echo cl_ikon('colours'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="javascript:void(0);" onclick="SMColibri.display_settings();">
+							<?php echo cl_translate('Display settings'); ?>
+						</a>
+					</span>
+				</li>
+				<li class="sidebar-v-nav-item-devider"></li>
+				<li class="sidebar-v-nav-item">
+					<span class="icon">
+						<?php echo cl_ikon('exit'); ?>
+					</span>
+					<span class="nav-item-holder">
+						<a href="javascript:void(0);" onclick="SMColibri.logout();">
+							<?php echo cl_translate('Logout'); ?>
+						</a>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="mobile-sb-footer">
+			<?php echo cl_template('main/footer'); ?>
+		</div>
+		<div class="publish-post-btn">
+			<button class="btn btn-custom main-inline lg btn-block" data-toggle="modal" data-target="#add_new_post">
+				<span class="d-inline-flex flex-wn align-items-center">
+					<span class="flex-item btn-icon">
+						<?php echo cl_ikon('feather'); ?>
+					</span>
+					<span class="flex-item">
+						<?php echo cl_translate('New post'); ?>
+					</span>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,118 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+button.btn-custom{
+	text-transform: uppercase;
+	border-radius: 10em;
+
+	&.main-inline{
+		color: #fff;
+		background: var(--smc-main-uiel-color);
+		box-shadow: var(--smc-main-box-shadow-eff);
+		border: 1px solid var(--smc-main-uiel-color);
+		outline: 0;
+
+		&:not([disabled]){
+			&:hover,&:active,&:focus{
+				background: var(--smc-main-uiel-color-darken-5);
+			}
+		}
+	}
+
+	&.main-outline{
+		color: var(--smc-main-uiel-color);
+		background: transparent;
+		font-weight: 500;
+		box-shadow: none;
+		border: 1px solid var(--smc-main-uiel-color);
+		outline: 0;
+		
+		&:not([disabled]){
+			&:hover,&:active,&:focus{
+				background: var(--smc-main-uiel-color-darken-5);
+				color: #fff;
+			}
+		}
+	}
+
+	&.lg{
+		padding: 10px 15px;
+		font-size: 11px;
+		line-height: 13px;
+		font-weight: 500;
+	}
+
+	&.md{
+		padding: 7px 15px;
+		font-size: 11px;
+		line-height: 13px;
+		font-weight: 500;
+	}
+
+	&.sm{
+		padding: 6px 15px;
+		font-size: 11px;
+		line-height: 13px;
+		font-weight: 500;
+	}
+
+	&.main-red{
+		color: #fff;
+		background: var(--smc-main-red-color);
+		box-shadow: var(--smc-main-box-shadow-eff);
+		border: 1px solid var(--smc-main-red-color);
+		outline: 0;
+	}
+
+	&.main-grey{
+		color: #14171aab;
+		background-color: #e6ecf0;
+		box-shadow: none;
+		border: 1px solid #e6ecf0;
+		outline: 0;
+	}
+
+	&.btn-block{
+		width: 100%;
+	}
+}
+
+button.fixed-bottom-right{
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	border: 1px solid var(--smc-main-uiel-color);
+	background: var(--smc-main-uiel-color);
+	box-shadow: var(--smc-main-box-shadow-eff);
+	padding: 0px;
+	margin: 0px;
+	border-radius: 10em;
+	z-index: 1000;
+	outline: 0;
+	cursor: pointer;
+
+	span.btn-inner{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		position: relative;
+		line-height: 0;
+
+		svg{
+			width: 25px;
+			height: 25px;
+			vertical-align: middle;
+			display: inline-block;
+			fill: #fff;
+		}
+	}
+}

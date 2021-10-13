@@ -1,0 +1,21 @@
+<div class="mobile-bottom-navbar" data-app="mobile-navbar">
+	<div class="mobile-bottom-navbar-inner">
+		<button class="navbar-ctrl" onclick="SMColibri.toggleSB();">
+			<?php echo cl_ikon('menu'); ?>
+		</button>
+		<button class="navbar-ctrl" data-anchor="<?php echo cl_link("home"); ?>">
+			<?php echo cl_ikon('home-alt'); ?>
+		</button>
+		<button class="navbar-ctrl" data-anchor="<?php echo cl_link("search"); ?>">
+			<?php echo cl_ikon('explore'); ?>
+		</button>
+		<button class="navbar-ctrl" data-anchor="<?php echo cl_link('notifications'); ?>">
+			<?php echo cl_ikon('bell'); ?>
+			<span class="info-indicators" data-an="new-notifs"><?php echo fetch_or_get($me['new_notifs']); ?></span>
+		</button>
+		<button class="navbar-ctrl" data-anchor="<?php echo cl_link("chats"); ?>">
+			<?php echo cl_ikon('envelope-alt'); ?>
+			<span class="info-indicators" data-an="new-messages"><?php echo fetch_or_get($me['new_messages']); ?></span>
+		</button>
+	</div>
+</div>

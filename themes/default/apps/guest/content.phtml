@@ -1,0 +1,158 @@
+<div class="welcome-page-container" data-app="guest">
+	<div class="welcome-page__inner">
+		<div class="welcome-page__content">
+			<div class="welcome-page__lp">
+				<div class="bg-image">
+					<img src="<?php echo cl_link('themes/default/statics/img/authwp/bg1.png'); ?>" alt="IMG">
+				</div>
+				<div class="welcome-page__lp-inner">
+					<div class="welcome-page__lp-header animated fadeIn">
+						<h1>
+							<?php echo cl_translate("Welcome to - {@name@}!", array('name' => $cl['config']['name'])); ?>
+						</h1>
+						<h3>
+							<?php echo cl_translate("__welcome_text__"); ?>
+						</h3>
+					</div>
+					<div class="welcome-page__lp-body">
+						<div class="welcome-page-features">
+							<div class="welcome-page-features__li animated fadeInUp">
+								<div class="d-flex align-items-center flex-wn">
+									<div class="flex-item">
+										<div class="icon">
+											<?php echo cl_ikon("grid-alt"); ?>
+										</div>
+									</div>
+									<div class="flex-item flex-grow-1">
+										<div class="text">
+											<h4>
+												<?php echo cl_translate("Explore"); ?>
+											</h4>
+											<p>
+												<?php echo cl_translate("Be the first to know about the hottest events"); ?>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="welcome-page-features__li animated fadeInUp animate__delay-2s">
+								<div class="d-flex align-items-center flex-wn">
+									<div class="flex-item">
+										<div class="icon">
+											<?php echo cl_ikon("favourite"); ?>
+										</div>
+									</div>
+									<div class="flex-item flex-grow-1">
+										<div class="text">
+											<h4>
+												<?php echo cl_translate("Like"); ?>
+											</h4>
+											<p>
+												<?php echo cl_translate("Like posts, image & videos you like and share your opinion"); ?>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="welcome-page-features__li animated fadeInUp">
+								<div class="d-flex align-items-center flex-wn">
+									<div class="flex-item">
+										<div class="icon">
+											<?php echo cl_ikon("person-add"); ?>
+										</div>
+									</div>
+									<div class="flex-item flex-grow-1">
+										<div class="text">
+											<h4>
+												<?php echo cl_translate("Follow"); ?>
+											</h4>
+											<p>
+												<?php echo cl_translate("Follow your interests and get followers"); ?>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<?php if (not_empty($cl['follow_suggestion'])): ?>
+						<div class="welcome-page__lp-footer animated fadeInLeft">
+							<div class="popular-users-list">
+								<?php foreach ($cl['follow_suggestion'] as $user_data): ?>
+									<div class="user-avatar">
+										<img src="<?php echo($user_data["avatar"]); ?>" alt="IMG">
+									</div>
+								<?php endforeach; ?>
+							</div>
+							<div class="join-cta">
+								<p>
+									<?php echo cl_translate("{@total_users@} people joined us, now it's your turn", array(
+										"total_users" => cl_html_el("b", (cl_number($cl["total_user"])  . "+"))
+									)); ?>
+								</p>
+							</div>
+						</div>
+					<?php endif; ?>
+				</div>
+			</div>
+		
+			<div class="welcome-page__rp">
+				<div class="welcome-page__rp-inner">
+					<div class="welcome-page-form">
+						<div class="welcome-page-form__header">
+							<div class="autu-navbar">
+								<div class="autu-navbar__item <?php if($cl["auth_type"] == "login"){echo('active');} ?>">
+									<a class="autu-navbar__item-link" href="<?php echo cl_link('guest?auth=login'); ?>">
+										<?php echo cl_translate("Login"); ?>
+									</a>
+								</div>
+								<div class="autu-navbar__item <?php if($cl["auth_type"] == "signup"){echo('active');} ?>">
+									<a class="autu-navbar__item-link" href="<?php echo cl_link('guest?auth=signup'); ?>">
+										<?php echo cl_translate("Sign up"); ?>
+									</a>
+								</div>
+								<div class="autu-navbar__item logo">
+									<div class="logo">
+					    				<a href="<?php echo cl_link('/'); ?>">
+											<img src="{%config site_logo%}" alt="Logo">
+										</a>
+					    			</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="welcome-page-form__body">
+							<div class="auth-form">
+								<div class="auth-form-holder">
+									<?php if ($cl["auth_type"] == "login"): ?>
+										<?php echo cl_template('auth/login'); ?>
+									<?php elseif($cl["auth_type"] == "forgot_pass"): ?>
+										<?php echo cl_template('auth/reset_password'); ?>
+									<?php elseif($cl["auth_type"] == "reset_pass" && not_empty($cl['em_code'])): ?>
+										<?php echo cl_template('auth/new_password'); ?>
+									<?php else: ?>
+										<?php if ($cl['config']['user_signup'] == "on" || not_empty($cl["invite_code_status"])): ?>
+											<?php echo cl_template('auth/register'); ?>
+										<?php else: ?>
+											<?php echo cl_template('auth/register_off'); ?>
+										<?php endif; ?>
+									<?php endif; ?>
+								</div>	
+							</div>
+						</div>
+
+						<div class="welcome-page-form__footer">
+							<div class="welcome-footer">
+								<?php echo cl_template('main/footer'); ?>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php echo cl_template('auth/scripts/app_master_script'); ?>
+

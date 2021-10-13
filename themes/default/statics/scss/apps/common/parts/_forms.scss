@@ -1,0 +1,242 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+form{
+	div.form-group{
+		width: 100%;
+		line-height: 0px;
+		margin-bottom: 20px;
+
+		&.no-mb{
+			margin-bottom: 0px !important;
+		}
+
+		&.mt-20{
+			margin-top: 20px;
+		}
+
+		label{
+			font-size: 13px;
+			line-height: 13px;
+			color: var(--smc-main-text-color);
+			margin-bottom: 7px;
+		}
+
+		input.form-control{
+			height: 48px;
+			border: none;
+			border-radius: 0px;
+			background: var(--smc-main-ibg-color);
+			border-bottom: 2px solid var(--smc-main-border-color);
+			box-shadow: none;
+			outline: 0;
+			font-size: 13px;
+			color: var(--smc-main-text-color);
+
+			&::placeholder{
+				font-size: 13px;
+				color: var(--smc-main-text-color-2);
+			}
+
+			&:disabled{
+				opacity: 0.65;
+				cursor: not-allowed;
+			}
+
+			&:not(:disabled){
+				&:hover,&:focus,&:active{
+					border-bottom: 2px solid var(--smc-main-uiel-color);
+					background: var(--smc-main-ibg-color);
+				}
+			}
+
+			&.is-invalid{
+				border-color: var(--smc-main-red-color);
+				box-shadow: none;
+
+				&::placeholder{
+					color: var(--smc-main-red-color);
+				}
+			}
+		}
+
+		div.password-ctrl{
+			position: relative;
+			line-height: 0px;
+
+			button.password-ctrl{
+				padding: 0;
+				margin: 0;
+				border: none;
+				border-radius: 0px;
+				background: transparent;
+				outline: 0;
+				box-shadow: none;
+				line-height: 0;
+				display: inline-block;
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				right: 15px;
+				top: calc(50% - 10px);
+				cursor: pointer;
+
+				span{
+					display: inline-block;
+					line-height: 0px;
+					width: 100%;
+					height: 100%;
+
+					svg{
+						width: 100%;
+						stroke: var(--smc-main-text-color-2);
+						transition: all 0.50s ease;
+					}
+				}
+				
+
+				&:hover, &:active{
+					span svg{
+						stroke: var(--smc-main-uiel-color);
+					}
+				}
+			}
+		}
+
+		div.vue-dropdown-select {
+			height: 46px;
+			border: none;
+			border-radius: 0px;
+			background: var(--smc-main-ehbg-color);
+			box-shadow: none;
+			outline: 0;
+
+			button.dropdown-toggle{
+				height: 46px !important;
+				border: none !important;
+				border-radius: 0px !important;
+				border-bottom: 2px solid var(--smc-main-border-color) !important;
+				outline: 0 !important;
+				background: transparent;
+				font-size: 13px;
+				line-height: 13px;
+				color: var(--smc-main-text-color-2);
+				box-shadow: none !important;
+				display: block;
+				width: 100%;
+				text-align: left;
+				position: relative;
+
+				&:hover,&:focus,&:active{
+					border-bottom: 2px solid var(--smc-main-uiel-color) !important;
+					background: #eff3f6 !important;
+					color: var(--smc-main-text-color-2);
+				}
+
+				&:after{
+					position: absolute;
+					right: 20px;
+					top: calc(50% - 3px);
+				}
+			}
+
+			.dropdown-menu{
+				width: 100%;
+				max-height: 250px;
+				overflow-y: auto;
+
+				a.dropdown-item{
+					b.select-check-mark{
+						font-size: 16px;
+						font-weight: 700;
+						color: var(--smc-main-uiel-color);
+						line-height: 16px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		textarea.form-control{
+			resize: vertical;
+			border: none;
+			border-radius: 0px;
+			background: var(--smc-main-ibg-color);
+			border-bottom: 2px solid var(--smc-main-border-color);
+			box-shadow: none;
+			outline: 0;
+			font-size: 13px;
+			color: #004874;
+
+			&::placeholder{
+				font-size: 13px;
+				color: var(--smc-main-text-color-2);
+			}
+
+			&:hover,&:focus,&:active{
+				border-bottom: 2px solid var(--smc-main-uiel-color);
+				background: #eff3f6;
+			}
+		}
+
+		p.form-info-label{
+			font-size: 12px;
+			color: var(--smc-main-uiel-color);
+			line-height: 18px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	div.invalid-main-feedback{
+		width: 100%;
+		display: block;
+		margin-bottom: 0px;
+		font-size: 11px;
+		color: var(--smc-main-red-color);
+		line-height: 16px;
+		margin-top: 5px;
+
+		&.bordered{
+			border-radius: 5px;
+			padding: 15px;
+			border: 1px solid var(--smc-main-red-color);
+		}
+
+		&.mb-20{
+			margin-bottom: 20px;
+		}
+	}
+
+	div.valid-main-feedback{
+		width: 100%;
+		display: block;
+		margin-bottom: 0px;
+		font-size: 11px;
+		color: var(--smc-main-uiel-color);
+		line-height: 16px;
+		margin-top: 5px;
+
+		&.bordered{
+			border-radius: 5px;
+			padding: 15px;
+			border: 1px solid var(--smc-main-uiel-color);
+		}
+
+		&.mb-20{
+			margin-bottom: 20px;
+		}
+	}
+
+	div.form-group-set{
+		width: 100%;
+		display: block;
+	}
+}

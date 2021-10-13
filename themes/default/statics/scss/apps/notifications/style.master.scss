@@ -1,0 +1,370 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+body.cl-app-notifications{
+	main.main-content-container{
+		div.main-content-container-inner{
+			height: 100vh !important;
+			padding-bottom: 0px !important;
+
+			div.timeline-container-wrapper{
+				min-height: 100%;
+			}
+
+			div.timeline-container-inner{
+				height: 100%;
+			
+				div.timeline-container{
+					height: 100%;
+
+					div.notifications-app-body{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						flex-wrap: nowrap;
+						overflow: hidden;
+					
+						div.vue-app-body{
+							flex: 1;
+							overflow: hidden;
+							height: 100%;
+
+							div.vue-app-body-inner{
+								width: 100%;
+								display: flex;
+								flex-direction: column;
+								flex-wrap: nowrap;
+								overflow: hidden;
+								height: 100%;
+							
+								div.profile-notifs-list-navbar{
+									width: 100%;
+									flex-shrink: 0;
+
+									div.profile-notifs-list-navbar-inner{
+										width: 100%;
+										overflow: hidden;
+										display: flex;
+										flex-direction: row;
+										flex-wrap: nowrap;
+										justify-content: space-between;
+										border-bottom: 1px solid var(--smc-main-border-color);
+
+										a{
+											flex: 1;
+											text-decoration: none;
+											line-height: 0px;
+											outline: 0;
+
+											button.navbar-item-btn{
+												background: transparent;
+												font-size: 11px;
+												font-weight: 700;
+												color: var(--smc-main-text-color-2);
+												line-height: 13px;
+												box-shadow: none;
+												border: none;
+												padding: 15px 30px;
+												cursor: pointer;
+												width: 100%;
+												outline: 0;
+												text-transform: uppercase;
+
+												&.active{
+													border-bottom: 2px solid var(--smc-main-uiel-color);
+												}
+
+												&:hover,&:active,&:focus{
+													background: var(--smc-main-ehbg-color);
+												}
+											}
+										}
+									}
+								}
+
+								div.profile-notifs-list-container{
+									width: 100%;
+									line-height: 0px;
+									overflow: hidden;
+									flex: 1;
+
+									div.profile-notifs-list{
+										width: 100%;
+										overflow: hidden;
+										padding: 0px;
+										display: block;
+										height: 100%;
+										overflow-x: hidden;
+										overflow-y: auto;
+										
+										div.profile-notifs-list-item{
+											width: 100%;	
+											padding: 15px 15px;
+											border-bottom: 1px solid var(--smc-main-border-color);
+											transition: background 0.27s ease-in-out;
+
+											&:hover,&:active{
+												background: var(--smc-main-ehbg-color);
+											}
+
+											a.block-nav-link{
+												display: block;
+												width: 100%;
+												text-decoration: none;
+												color: none;
+											}
+
+											div.main-flex-cr{
+												width: 100%;
+												display: flex;
+												flex-direction: row;
+												flex-wrap: nowrap;
+
+												div.avatar-holder{
+													div.avatar{
+														width: 40px;
+														height: 40px;
+														min-width: 40px;
+														max-width: 40px;
+														overflow: hidden;
+														line-height: 0px;
+														border-radius: 10em;
+
+														img{
+															width: 100%;
+															height: 100%;
+															object-fit: cover;
+														}
+													}
+												}
+
+												div.notifier-info-holder{
+													flex: 1;
+													line-height: 0px;
+													padding-left: 15px;
+
+													div.el-block-header{
+														width: 100%;
+														line-height: 0px;
+														display: block;
+
+														div.notifier-name{
+															p{
+																padding: 0;
+																margin: 0;
+																font-size: 13px;
+																line-height: 18px;
+															
+																span{
+																	position: relative;
+																	color: var(--smc-main-text-color-2);
+
+																	&.unseen {
+																		opacity: 1;
+																		font-weight: 700;
+																	}
+																}
+
+																b{
+																	span{
+																		color: var(--smc-main-text-color);
+																	}
+																}
+															}
+														}
+
+														div.notif-time{
+															width: 100%;
+															display: block;
+
+															svg{
+																width: 13px;
+																height: 13px;
+																display: inline-block;
+																vertical-align: middle;
+																stroke: var(--smc-main-text-color-2);
+															}
+
+															time{
+																font-size: 13px;
+																line-height: 22px;
+																color: var(--smc-main-text-color-2);
+															}
+														}
+													}
+
+													div.el-block-body{
+														width: 100%;
+														display: block;
+														line-height: 0px;
+														margin-top: 10px;
+
+														div.event-content-wrapper{
+															width: 100%;
+															display: block;
+															border: 1px solid var(--smc-main-border-color);
+															border-radius: 10px;
+															padding: 10px;
+															background: #f5f8fa;
+
+															p.event-desc{
+																font-size: 13px;
+																line-height: 18px;
+																color: var(--smc-main-text-color-2);
+																padding: 0;
+																margin: 0;
+															}
+														}
+													}
+												}
+
+												div.notif-delete{
+													width: 22px;
+													height: 22px;
+													line-height: 0px;
+													cursor: pointer;
+													visibility: hidden;
+													transition: visibility 0.27s ease;
+													
+													span{
+														display: inline-block;
+														line-height: 0;
+
+														svg{
+															width: 22px;
+															height: 22px;
+															stroke: var(--smc-main-uiel-color);
+														}
+													}
+
+
+												}
+
+												&:hover, &:active{
+													div.notif-delete{
+														visibility: visible;
+													}
+												}
+											}
+										}
+
+										@import "../../snippets/_scrollbar.scss";
+									}
+
+									div.notifications-empty-list-placeholder{
+										width: 100%;
+										display: flex;
+										flex-direction: column;
+										flex-wrap: nowrap;
+										align-items: center;
+										line-height: 0px;
+										padding: 100px 50px;
+										height: 100%;
+										overflow: hidden;
+
+								 		div.icon{
+								 			line-height: 0px;
+											margin-bottom: 15px;
+											width: 100%;
+											text-align: center;
+
+								 			svg{
+									 			width: 80px;
+									 			height: 80px;
+									 			stroke: var(--smc-main-uiel-color);
+									 		}
+								 		}
+
+								 		div.pl-message{
+											line-height: 0px;
+											width: 100%;
+											margin-bottom: 50px;
+
+											h4{
+												font-size: 20px;
+												padding: 0;
+												margin: 0 0 15px 0;
+												line-height: 20px;
+												color: var(--smc-main-text-color);
+												font-weight: 700;
+												text-align: center;
+											}
+
+											p{
+												font-size: 13px;
+												line-height: 20px;
+												padding: 0;
+												margin: 0;
+												color: var(--smc-main-text-color-2);
+												text-align: center;
+												overflow-wrap: break-word;
+											}
+										}
+
+										div.c2action-single{
+											width: 100%;
+											line-height: 0px;
+											text-align: center;
+
+											a{
+												display: inline-block;
+												line-height: 0px;
+												text-decoration: none;
+
+												button{
+													padding-left: 40px;
+													padding-right: 40px;
+												}
+											}
+										}
+									}
+								}
+
+								div.notifs-selection-control{
+									width: 100%;
+									flex-shrink: 0;
+									border-top: 1px solid var(--smc-main-border-color);
+									background: var(--smc-main-bg-color-2);
+									
+									div.notifs-selection-control-inner{
+										padding: 15px;
+										display: flex;
+										flex-direction: row;
+										flex-wrap: nowrap;
+										align-items: center;
+										justify-content: flex-end;
+
+										button{
+											display: block;
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			div.right-sb-container, div.left-sb-container{
+				height: 100vh;
+				overflow-x: hidden;
+				overflow-y: scroll;
+
+				@import "../../snippets/_hide_scrollbar.scss";
+			}
+
+			@include media-breakpoint-down(xl) {
+				height: calc(100vh - 55px) !important;
+			}
+		}
+	}
+}

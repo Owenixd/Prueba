@@ -1,0 +1,280 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+body.cl-app-start_up{
+	main.main-content-container{
+		div.main-content-container-inner{
+			div.timeline-container{
+				div.main-profile-startup-container{
+					width: 100%;
+					display: block;
+					padding: 15px;
+
+					div.startup{
+						display: block;
+						border: 1px solid var(--smc-main-border-color);
+						padding: 20px;
+						border-radius: var(--smc-main-border-rad1);
+
+						div.startup-body{
+							display: block;
+							width: 100%;
+
+							div.startup-body-title{
+								width: 100%;
+								display: block;
+								margin-bottom: 30px;
+
+								div.icon{
+									width: 100%;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									margin-bottom: 10px;
+
+									span{
+										width: 50px;
+										height: 50px;
+										min-width: 40px;
+
+										svg{
+											width: 100%;
+											stroke: var(--smc-main-uiel-color);
+											stroke-width: 0.8;
+										}
+									}
+								}
+
+								h1{
+									font-size: 24px;
+									line-height: 32px;
+									color: var(--smc-main-text-color);
+									text-align: center;
+									font-weight: 700;
+								}
+
+								p{
+									font-size: 13px;
+									line-height: 18px;
+									color: var(--smc-main-text-color-2);
+									text-align: center;
+								}
+							}
+							
+							div.startup-body-content{
+								width: 100%;
+								display: block;
+								margin-bottom: 30px;
+
+								div.startup-avatar{
+									width: 100%;
+									display: block;
+
+									div.startup-avatar-inner{
+										width: 100%;
+										display: block;
+
+										div.avatar-imgholder{
+											width: 120px;
+											height: 120px;
+											border: none;
+											overflow: hidden;
+											border-radius: 10em;
+											
+											img{
+												width: 100%;
+												height: 100%;
+												object-fit: cover;
+												padding: 0;
+												margin: 0;
+											}
+										}
+
+										div.avatar-placeholder{
+											width: 120px;
+											height: 120px;
+											border: none;
+											box-shadow: none;
+											line-height: 0;
+
+											button.upload-avatar{
+												background-color: var(--smc-main-uiel-color);
+												border: none;
+												line-height: 0px;
+												padding: 0px;
+												width: 100%;
+												height: 100%;
+												border-radius: 10em;
+												display: flex;
+												flex-direction: row;
+												flex-wrap: nowrap;
+												cursor: pointer;
+												justify-content: center;
+												align-items: center;
+												transition: visibility 0.1s linear,opacity 0.1s linear;
+												box-shadow: var(--smc-main-box-shadow-eff);
+												outline: 0;
+
+												svg{
+													width: 50px;
+													height: 50px;
+													stroke: #fff;
+													stroke-width: 1;
+													display: inline-block;
+												}
+
+												&:disabled{
+													cursor: wait !important;
+												}
+											}
+										}
+									}
+								}
+
+								div.startup-info{
+									display: block;
+									width: 100%;
+								}
+
+								div.startup-suggested{
+									display: block;
+									width: 100%;
+
+									div.suggested-list{
+										display: block;
+										width: 100%;
+										max-height: 400px;
+										overflow-x: hidden;
+										overflow-y: auto;
+										margin-bottom: 20px;
+
+										@import "../../snippets/_scrollbar.scss";
+
+										div.suggested-list-item{
+											width: 100%;
+											display: flex;
+											flex-direction: row;
+											flex-wrap: nowrap;
+											line-height: 0px;
+											border-bottom: 1px solid var(--smc-main-border-color);
+											padding: 10px 15px 15px 0px;
+
+											div.avatar{
+												width: 40px;
+												height: 40px;
+												overflow: hidden;
+												min-width: 40px;
+												max-width: 40px;
+												border-radius: 10em;
+
+												img{
+													width: 100%;
+													height: 100%;
+													object-fit: cover;
+												}
+											}
+
+											div.user-info-holder{
+									 			flex: 1;
+									 			padding: 0 0 0 10px;
+									 			line-height: 0px;
+
+									 			h4{
+									 				font-size: 13px;
+									 				padding: 0;
+									 				margin: 0;
+									 				line-height: 13px;
+									 				font-weight: 700;
+									 				color: var(--smc-main-text-color);
+									 				white-space: nowrap;
+									 			}
+
+									 			a{
+									 				display: block;
+									 				text-decoration: none;
+									 				color: var(--smc-main-text-color-2);
+									 				font-size: 13px;
+									 				line-height: 20px;
+									 				overflow: hidden;
+									 				white-space: nowrap;
+									 				text-overflow: ellipsis;
+									 				max-width: 140px;
+									 			}
+
+									 			p{
+									 				font-size: 13px;
+									 				line-height: 18px;
+									 				padding: 0;
+									 				margin: 5px 0 0 0;
+									 				padding-right: 40px;
+									 				word-wrap: break-word;
+									 				max-width: 100%;
+									 				overflow: hidden;
+									 				word-break: break-all;
+									 			}
+									 		}
+
+									 		&:hover,&:active{
+									 			background: var(--smc-main-ehbg-color);
+									 		}
+
+									 		&:last-child{
+									 			border-bottom: none;
+									 		}
+										}
+									}
+								}
+							}
+
+							div.startup-body-ctrls{
+								width: 100%;
+								display: block;
+
+								p{
+									padding: 0;
+									margin: 0 0 20px 0;
+									font-size: 13px;
+									line-height: 20px;
+									color: var(--smc-main-text-color);
+									text-transform: uppercase;
+									text-align: center;
+								}
+
+								button.btn-text{
+									border: none;
+									border-radius: 0px;
+									color: var(--smc-main-text-color-2);
+									font-size: 13px;
+									line-height: 13px;
+									font-weight: 500;
+									background: transparent;
+									transition: all 0.27s ease-in-out;
+									margin-top: 15px;
+									box-shadow: none;
+									display: block;
+									width: 100%;
+									text-align: center;
+
+									&:hover, &:active, &:focus{
+										background: transparent;
+										border: none;
+										outline: 0;
+										box-shadow: none;
+										color: var(--smc-main-uiel-color);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

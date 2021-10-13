@@ -1,0 +1,78 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+$smc-main-bg-color: #15202b;
+$smc-main-bg-color-2: #1a2e3b;
+$smc-main-border-color: #586d7b;
+$smc-main-text-color: #fff;
+$smc-main-text-color-2: #93b7d8;
+$smc-main-ibg-color: #253341;
+$smc-main-iph-color: #5b7083;
+$smc-main-ehbg-color: #1a2e3b;
+$smc-main-icon-color: #93b7d8;
+
+
+body[data-bg="dark"]{
+
+	/*SVG-IKON-COLORS*/
+
+	--smc-main-icon-color: #{$smc-main-icon-color};
+
+	/*==================================================*/
+
+	/*BG-COLORS*/
+
+	--smc-main-bg-color: #{$smc-main-bg-color};
+	--smc-main-bg-color-2: #{$smc-main-bg-color-2};
+
+	/*==================================================*/
+
+	/*BORDER-COLORS*/
+
+	--smc-main-border-color: #{$smc-main-border-color};
+	--smc-main-border-color-darken-5: #{darken($smc-main-border-color, 5)};
+
+	/*==================================================*/
+
+	/*TEXT-COLORs*/
+
+	--smc-main-text-color: #{$smc-main-text-color};
+	--smc-main-text-color-2: #{$smc-main-text-color-2};
+	--smc-main-text-color-lighten-5: #{lighten($smc-main-text-color, 5)};
+
+	/*==================================================*/
+
+
+	/*INPUT-COLORS*/
+
+	--smc-main-iph-color: #{$smc-main-iph-color};
+	--smc-main-ibg-color: #{$smc-main-ibg-color};
+
+	/*==================================================*/
+
+	/*BOX-SHAD-EFF*/
+
+	--smc-main-box-shadow-eff: rgba(0, 0, 0, 0.15) 0px 1px 10px 0px;
+
+	/*==================================================*/
+
+
+	/*MODAL-BACKDROP-COLOR*/
+
+	--smc-main-mbd-color: #{rgba($smc-main-text-color-2, 0.4)};
+
+	/*==================================================*/
+
+	/*ELHOV-BG-COLOR*/
+
+	--smc-main-ehbg-color: #{$smc-main-ehbg-color};
+
+	/*==================================================*/
+}

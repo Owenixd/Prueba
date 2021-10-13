@@ -1,0 +1,44 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+$smc-main-red-color: #f6546a;
+$smc-main-green-color: #35c85f;
+$smc-main-orange-color: #ffa500;
+
+:root{
+	/*CONTRAST-COLORS*/
+
+	--smc-main-red-color: #{$smc-main-red-color};
+	--smc-main-red-color-lighten-5: #{lighten($smc-main-red-color, 5)};
+	--smc-main-green-color: #{$smc-main-green-color};
+	--smc-main-orange-color: #{$smc-main-orange-color};
+
+	/*==================================================*/
+
+	--smc-main-border-rad1: 10px;
+	--smc-main-border-rad2: 5px;
+}
+
+
+@import 'color_schemes/_default';
+
+@import 'color_schemes/_green';
+
+@import 'color_schemes/_yellow';
+
+@import 'color_schemes/_pink';
+
+@import 'color_schemes/_purple';
+
+@import 'color_schemes/_orange';
+
+@import 'backgrounds/_dark';
+@import 'backgrounds/_white';
+@import 'backgrounds/_black';

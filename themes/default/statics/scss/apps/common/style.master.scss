@@ -1,0 +1,282 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+html {
+	scroll-behavior: smooth;
+	font-family: Inter, sans-serif;
+}
+
+body{
+	font-family: inherit !important;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	&.modal-open{
+		overflow-y: scroll;
+		padding: 0px !important;
+	}
+
+	@import "../../snippets/_scrollbar.scss";
+
+	main.main-content-container{
+		width: 100%;
+		background: var(--smc-main-bg-color);
+		min-width: 320px;
+		-moz-transition: right 0.5s;
+	    -o-transition: right 0.5s;
+	    -webkit-transition: right 0.5s;
+	    transition: right 0.5s;
+
+		div.main-content-container-inner{
+			width: 100%;
+			max-width: 1220px !important;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			
+			div.timeline-container-wrapper{
+				flex: 2;
+				max-width: 600px;
+				min-width: 600px;
+				border-left: 1px solid var(--smc-main-border-color);
+				border-right: 1px solid var(--smc-main-border-color);
+				min-height: 100vh;
+				position: relative;
+
+				div.timeline-container-inner{
+					div.timeline-container{
+						display: block;
+						width: 100%;
+						padding-top: 65px;
+						
+						div.timeline-header{
+							width: 100%;
+							overflow: hidden;
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							height: 65px;
+							align-items: center;
+							justify-content: space-between;
+							line-height: 0;
+							padding: 0px 15px;
+							border-bottom: 1px solid var(--smc-main-border-color);
+							background: var(--smc-main-bg-color);
+							position: fixed;
+							top: 0;
+							z-index: 50;
+							box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 5px 0px;
+
+							div.lp{
+								div.nav-link-holder{
+									line-height: 0;
+									display: block;
+									padding: 0;
+									margin: 0;
+
+									a{
+										padding: 0;
+										margin: 0;
+										font-size: 16px;
+										line-height: 16px;
+										font-weight: 700;
+										color: var(--smc-main-text-color);
+										text-decoration: none;
+										max-width: 200px;
+										overflow: hidden;
+										text-overflow: ellipsis;
+									}
+								}
+							}
+							
+							div.cp{
+								position: absolute;
+								left: 0;
+								top: 0;
+								bottom: 0;
+								right: 0;
+								margin: auto;
+								width: 30px;
+								height: 30px;
+								a{
+									text-decoration: none;
+									img{
+										height: 30px;
+									}
+								}
+							}
+
+							div.rp{
+								div.nav-link-holder{
+									line-height: 0px;
+									a{
+										text-decoration: none;
+										svg{
+											width: 20px;
+											height: 20px;
+											stroke: var(--smc-main-uiel-color);
+										}
+									}
+
+
+									span.go-back{
+										padding: 0;
+										margin: 0;
+										font-size: 16px;
+										line-height: 16px;
+										color: var(--smc-main-text-color);
+										cursor: pointer;
+
+										svg{
+											width: 20px;
+											height: 20px;
+											stroke: var(--smc-main-uiel-color);
+											stroke-width: 2;
+										}
+									}
+								}
+							}
+						}
+
+						&.no-affix{
+							padding-top: 0px;
+
+							div.timeline-header{
+								position: relative;
+								left: unset;
+								top: unset;
+								box-shadow: none;
+							}
+						}
+
+						@import "parts/_publication";
+
+						div.modals-container{
+							display: block;
+							width: 100%;
+						}
+					}
+				}
+
+				div.spa-preloader{
+					position: absolute;
+					display: block;
+					left: 0;
+					top: 65px;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					background: var(--smc-main-bg-color);
+					z-index: 10;
+
+					&.d-none{
+						display: none;
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					div.spa-preloader-inner{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;
+						justify-content: center;
+						padding: 100px 50px;
+
+						span.spinner-icon{
+							width: 40px;
+							height: 40px;
+							overflow: hidden;
+
+							svg{
+								width: 100%;
+								height: 100%;
+							}
+						}
+					}
+				}
+
+				@include media-breakpoint-down(xl) {
+					width: 100%;
+					min-width: 100%;
+					max-width: 100%;
+					border-right: none;
+					border-left: none;
+				}
+			}
+
+			@import "navbars/_left";
+
+			@import "navbars/_right";
+
+			@include media-breakpoint-down(xl) {
+				padding-bottom: 50px;
+				max-width: 100% !important;
+			}
+		}
+
+		&.guest-mode div.main-content-container-inner{
+			div.left-sb-container{
+				flex: 1;
+
+				div.sidebar__inner{
+					padding-left: 30px !important;
+				}
+			}
+		}
+	}
+
+	@import "navbars/_bottom";
+
+	@import "parts/_forms";
+
+	@import "parts/_preloader";
+
+	@import "parts/_keyframes";
+
+	@import "parts/_helpers";
+
+	@import "parts/_modals";
+
+	@import "parts/_dropdowns";
+
+	@import "parts/_buttons";
+
+	@import "parts/_pubbox";
+
+	@import "parts/_uname_popover";
+
+	@include media-breakpoint-down(xl) {
+		div.mobile-bottom-navbar{
+			display: block;
+		}
+
+		div.sb-open-overlay{
+			cursor: pointer;
+			-moz-transition: right 0.5s;
+		    -o-transition: right 0.5s;
+		    -webkit-transition: right 0.5s;
+		    transition: right 0.5s;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 105;
+		}
+	}
+}

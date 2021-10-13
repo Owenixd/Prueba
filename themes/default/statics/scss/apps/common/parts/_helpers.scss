@@ -1,0 +1,211 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+.d-flex{
+	width: 100%;
+
+	.flex-nw, .flex-wn{
+		flex-wrap: nowrap;
+	}
+
+	.flex-grow-1{
+		flex: 1;
+	}
+}
+
+.of-hide{
+	overflow: hidden;
+}
+
+div.row{
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+}
+
+div.col-lg-1,
+div.col-lg-2,
+div.col-lg-3,
+div.col-lg-4,
+div.col-lg-5,
+div.col-lg-6,
+div.col-lg-7,
+div.col-lg-8,
+div.col-lg-9,
+div.col-lg-10,
+div.col-lg-11,
+div.col-lg-12 {
+    padding: 0px 10px;
+}
+
+div.col-md-1,
+div.col-md-2,
+div.col-md-3,
+div.col-md-4,
+div.col-md-5,
+div.col-md-6,
+div.col-md-7,
+div.col-md-8,
+div.col-md-9,
+div.col-md-10,
+div.col-md-11,
+div.col-md-12 {
+    padding: 0px 10px;
+}
+
+div.col-sm-1,
+div.col-sm-2,
+div.col-sm-3,
+div.col-sm-4,
+div.col-sm-5,
+div.col-sm-6,
+div.col-sm-7,
+div.col-sm-8,
+div.col-sm-9,
+div.col-sm-10,
+div.col-sm-11,
+div.col-sm-12 {
+    padding: 0px 10px;
+}
+
+div.col-xs-1,
+div.col-xs-2,
+div.col-xs-3,
+div.col-xs-4,
+div.col-xs-5,
+div.col-xs-6,
+div.col-xs-7,
+div.col-xs-8,
+div.col-xs-9,
+div.col-xs-10,
+div.col-xs-11,
+div.col-xs-12 {
+    padding: 0px 10px;
+}
+
+div.col-xxl-1,
+div.col-xxl-2,
+div.col-xxl-3,
+div.col-xxl-4,
+div.col-xxl-5,
+div.col-xxl-6,
+div.col-xxl-7,
+div.col-xxl-8,
+div.col-xxl-9,
+div.col-xxl-10,
+div.col-xxl-11,
+div.col-xxl-12 {
+    padding: 0px 10px;
+}
+
+a.inline-link{
+	font-size: inherit !important;
+	line-height: inherit !important;
+	color: var(--smc-main-link-color) !important;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.col-red{
+	color: var(--smc-main-red-color) !important;
+}
+
+.col-grey{
+	color: var(--smc-main-text-color-2) !important;
+}
+
+.col-blue{
+	color: var(--smc-main-uiel-color) !important;
+}
+
+.ov-h{
+	overflow: hidden;
+}
+
+.ml-auto{
+	margin-left: auto;
+}
+
+svg[stroke-width="1.8"]{
+	stroke-width: 1.6;
+}
+
+video{
+	max-height: 100%;
+}
+
+[data-href]{
+	cursor: pointer;
+}
+
+span.user-name-holder.verified-badge{
+	font-size: inherit !important;
+	color: inherit !important;
+	line-height: inherit !important;
+	display: inline-block !important;
+	position: relative !important;
+	margin-right: 15px !important;
+	width: auto !important;
+	font-weight: inherit !important;
+
+	&:after{
+		color: var(--smc-main-uiel-color);
+		content: url("data:image/svg+xml; utf8, <svg style='vertical-align: middle;'  xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24'><path fill='dodgerblue' d='M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z'></path></svg>");
+		position: absolute;
+		top: calc(50% - 7px);
+		right: -17px;
+		width: 15px;
+		height: 15px;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		line-height: 0px;
+	}
+}
+
+a.image-wrapper.fbox-media{
+	display: inherit !important;
+	line-height: 0;
+	text-decoration: none;
+}
+
+div.cl-google-ads{
+	margin-bottom: 15px;
+	margin-top: 15px;
+
+
+	&.centered{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		overflow: hidden;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+span.spinner-icon{
+	svg{
+		path{
+			fill: var(--smc-main-uiel-color);
+		}
+	}
+}
+
+div.bootstrap-bp-display{
+	position: fixed; 
+	top: 90%; 
+	left: 50%; 
+	z-index: 10000; 
+	transform: translate(-50%, -50%); 
+	background: red; 
+	padding: 0.5rem 1rem; 
+	border-radius: 30px; 
+	color: #fff;
+}

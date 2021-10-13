@@ -1,0 +1,302 @@
+// @*************************************************************************@
+// @ Software author: Mansur Altamirov (Mansur_TL)							 @
+// @ Author_url 1: https://www.instagram.com/mansur_tl                       @
+// @ Author_url 2: http://codecanyon.net/user/mansur_tl                      @
+// @ Author E-mail: vayart.help@gmail.com                                    @
+// @*************************************************************************@
+// @ ColibriSM - The Ultimate Modern Social Media Sharing Platform           @
+// @ Copyright (c) 2020 - 2021 ColibriSM. All rights reserved.               @
+// @*************************************************************************@
+
+body.cl-app-ads{
+	main.main-content-container{
+		div.main-content-container-inner{
+			div.timeline-container{
+				div.main-ads-settings-container{
+					width: 100%;
+					display: block;
+					line-height: 0px;
+
+					div.main-ads-settings-container-inner{
+						width: 100%;
+						display: block;
+
+						div.account-ads-list-navbar{
+							width: 100%;
+							display: block;
+
+							div.account-ads-list-navbar-inner{
+								width: 100%;
+								overflow: hidden;
+								overflow-x: auto;
+								display: flex;
+								flex-direction: row;
+								flex-wrap: nowrap;
+								justify-content: space-between;
+								border-bottom: 1px solid var(--smc-main-border-color);
+
+								a{
+									flex: 1;
+									text-decoration: none;
+									line-height: 0px;
+									outline: 0;
+									flex-shrink: 0;
+
+									button.navbar-item-btn{
+										background: transparent;
+										font-size: 11px;
+										font-weight: 700;
+										color: var(--smc-main-text-color-2);
+										line-height: 13px;
+										box-shadow: none;
+										border: none;
+										padding: 15px 30px;
+										cursor: pointer;
+										width: 100%;
+										outline: 0;
+										text-transform: uppercase;
+										white-space: nowrap;
+
+										&.active{
+											border-bottom: 2px solid var(--smc-main-uiel-color);
+										}
+
+										&:hover,&:active,&:focus{
+											background: var(--smc-main-ehbg-color);
+										}
+									}
+								}
+
+								@import "../../snippets/_hide_scrollbar.scss";
+							}
+						}
+
+						div.account-ads-list-container{
+							width: 100%;
+							line-height: 0px;
+
+							div.upsert-ads-form-container{
+								width: 100%;
+								display: block;
+								padding: 20px 15px;
+
+								div.form-group{
+									div.ad-cover-dropzone{
+										width: 100%;
+										display: block;
+
+										div.ad-cover-dropzone-inner{
+											width: 100%;
+											display: block;
+											border: 2px dashed var(--smc-main-border-color);
+											transition: all 0.27s ease;
+											cursor: pointer;
+
+											&:hover, &:active{
+												border-color: var(--smc-main-uiel-color);
+											}
+
+											div.ad-cover-upload{
+												width: 100%;
+												display: flex;
+												flex-direction: column;
+												align-items: center;
+												justify-content: center;
+												padding: 25px 15px;
+
+												div.icon{
+													width: 45px;
+													height: 45px;
+													min-height: 45px;
+													min-width: 45px;
+													margin-bottom: 2px;
+
+													svg{
+														width: 100%;
+														height: 100%;
+														stroke: var(--smc-main-uiel-color);
+													}
+												}
+
+												div.txt-label{
+													text-align: center;
+													font-size: 11px;
+													color: var(--smc-main-text-color-2);
+													line-height: 18px;
+													text-transform: uppercase;
+												}
+											}
+
+											img{
+												width: 100%;
+												display: block;
+											}
+										}
+									}
+
+									&.tos-agreement{
+										width: 100%;
+										line-height: 0px;
+										margin-bottom: 20px;
+
+										
+									}
+
+									p.form-info-label{
+										margin-top: 5px;
+									}
+
+									div.multiselect-toggle-all{
+										width: 100%;
+										display: block;
+										margin-top: 10px;
+
+										label{
+											font-size: 14px;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					div.feature-system-off-page{
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						flex-wrap: nowrap;
+						line-height: 0px;
+						padding: 50px 25px 50px 25px;
+						height: calc(100vh - 55px);
+
+						div.icon{
+							line-height: 0px;
+							margin-bottom: 15px;
+							width: 100%;
+							text-align: center;
+
+							svg{
+								width: 100px;
+								height: 100px;
+								display: inline-block;
+								vertical-align: middle;
+							}
+						}
+
+						div.pl-message{
+							line-height: 0px;
+							width: 100%;
+							margin-bottom: 50px;
+
+							h4{
+								font-size: 20px;
+								padding: 0;
+								margin: 0 0 15px 0;
+								line-height: 20px;
+								color: var(--smc-main-text-color);
+								font-weight: 700;
+								text-align: center;
+							}
+
+							p{
+								font-size: 13px;
+								line-height: 18px;
+								padding: 0;
+								margin: 0;
+								color: var(--smc-main-text-color-2);
+								text-align: center;
+								overflow-wrap: break-word;
+							}
+						}
+
+						div.c2action-single{
+							width: 100%;
+							line-height: 0px;
+							text-align: center;
+
+							a{
+								display: inline-block;
+								line-height: 0px;
+								text-decoration: none;
+
+								button{
+									padding-left: 40px;
+									padding-right: 40px;
+								}
+							}
+						}
+					}
+				}
+
+				div.empty-user-timeline {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					justify-content: center;
+					align-items: center;
+					line-height: 0px;
+					padding: 50px;
+					height: 350px;
+					overflow: hidden;
+
+			 		div.icon{
+			 			line-height: 0px;
+						margin-bottom: 15px;
+						width: 100%;
+						text-align: center;
+
+			 			svg{
+				 			width: 50px;
+				 			height: 50px;
+				 			stroke: var(--smc-main-uiel-color);
+				 		}
+			 		}
+
+			 		div.pl-message{
+						line-height: 0px;
+						width: 100%;
+						margin-bottom: 50px;
+
+						h4{
+							font-size: 20px;
+							padding: 0;
+							margin: 0 0 15px 0;
+							line-height: 20px;
+							color: var(--smc-main-text-color);
+							font-weight: 700;
+							text-align: center;
+						}
+
+						p{
+							font-size: 13px;
+							line-height: 20px;
+							padding: 0;
+							margin: 0;
+							color: var(--smc-main-text-color-2);
+							text-align: center;
+							overflow-wrap: break-word;
+
+							a{
+								font-weight: 700;
+								color: var(--smc-main-link-color);
+								text-decoration: underline;
+							}
+						}
+					}
+
+					div.c2action-single{
+						width: 100%;
+						line-height: 0px;
+						text-align: center;
+
+						button{
+							padding-left: 40px;
+							padding-right: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
